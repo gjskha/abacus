@@ -17,14 +17,17 @@ function draw() {
 		ctx.stroke();
 	
 		/* beads */
-		ctx.beginPath();
 		ctx.lineWidth = 1;
 		for (var i = 0; i < 14; i++) {
+			for (var j = 1; j < 6; j++) {
+		        ctx.beginPath();
+			ctx.arc(20 + 20 * i, 10 + 20 * j, 5, 0, Math.PI * 2, true); 
+		       ctx.fill();
+			}
 			//ctx.moveTo(20 + 20 * i, 20);
-			ctx.arc(60, 25, 5, 0, Math.PI * 2, true); 
-			ctx.arc(40, 65, 5, 0, Math.PI * 2, true); 
+			//      h   v  r  
+			//ctx.arc(60, 25, 5, 0, Math.PI * 2, true); 
 		}
-		ctx.fill();
 		
 		/* horizontal bar */
 		ctx.beginPath();
